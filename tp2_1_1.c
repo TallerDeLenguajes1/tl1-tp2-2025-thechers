@@ -4,6 +4,7 @@
 #define N 20
 
 int main () {
+srand(time(NULL));
 int i;
 double vt[N];
 
