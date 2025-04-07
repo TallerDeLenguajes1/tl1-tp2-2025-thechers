@@ -1,0 +1,10 @@
+¿Puede ver el archivo tp2_1_2.c? ¿Por qué?
+No, no podia verlo porque no se encontraba habilitada la visualizacion total ("All") en el Source Control del VSCode.
+Por lo que no podia ver el historial de versiones completo.
+
+¿Que diferencias nota al activarlo?
+Ahora es posible ver el archivo "tp2_1_2" como una rama anexa a la principal que se distingue por un color particular.
+
+¿Qué nota al hacer el merge entre Opcion_2 y main?
+Al hacer el merge se nota un puente que conecta la rama "main" con la anexa "Opcion_2" y queda evidenciado que se pudieron 
+agregar efectivamente los cambios realizados en la rama alternativa a la principal.
