@@ -19,7 +19,7 @@ int main () {
     char tipos[6][10] = {"Intel","AMD","Celeron","Athlon","Core","Pentium"};
     struct compu pcs[5];
 
-    printf("Ingrese la opcion que se adapte a sus necesidades:\n1. Listar PCs\n2. Mostrar PC más antigua\n3. Mostrar PC más veloz\n");
+    printf("Ingrese la opcion que se adapte a sus necesidades:\n1. Listar PCs\n2. Mostrar PC mas antigua\n3. Mostrar PC mas veloz\n");
     scanf("%d",&num1);
 
     for (int i = 0;i<cantidad;i++) {
@@ -53,7 +53,7 @@ void listarPCs(struct compu pcs[], int cantidad)
         for (int i = 0; i < cantidad; i++)
         {
             printf("\n## MODELO %d ##\n",i+1);
-            printf("Velocidad: %d Ghz\nAnio de fabricación: %d\nCantidad de Nucleos: %d\nTipo de Procesador: %s\n",pcs[i].velocidad,pcs[i].anios,pcs[i].cantidad_nucleos,pcs[i].tipo_cpu);
+            printf("Velocidad: %d Ghz\nAnio de fabricacion: %d\nCantidad de Nucleos: %d\nTipo de Procesador: %s\n",pcs[i].velocidad,pcs[i].anios,pcs[i].cantidad_nucleos,pcs[i].tipo_cpu);
         }
         
     }
@@ -73,7 +73,7 @@ void mostrarMasVieja(struct compu pcs[],int cantidad)
         {
             if (control == pcs[i].anios)
             {
-                printf("## MODELO %d ##\nVelocidad: %d Ghz\nAnio de fabricación: %d\nCantidad de Nucleos: %d\nTipo de Procesador: %s\n",i,pcs[0].velocidad,pcs[0].anios,pcs[0].cantidad_nucleos,pcs[0].tipo_cpu);
+                printf("## MODELO %d ##\nVelocidad: %d Ghz\nAnio de fabricacion: %d\nCantidad de Nucleos: %d\nTipo de Procesador: %s\n",i,pcs[0].velocidad,pcs[0].anios,pcs[0].cantidad_nucleos,pcs[0].tipo_cpu);
                 break;
             }
             
@@ -81,7 +81,7 @@ void mostrarMasVieja(struct compu pcs[],int cantidad)
         
     }
     
-    printf("## MODELO %d ##\nVelocidad: %d Ghz\nAnio de fabricación: %d\nCantidad de Nucleos: %d\nTipo de Procesador: %s\n",indiceControl,pcs[indiceControl].velocidad,pcs[indiceControl].anios,pcs[indiceControl].cantidad_nucleos,pcs[indiceControl].tipo_cpu);
+    printf("## MODELO %d ##\nVelocidad: %d Ghz\nAnio de fabricacion: %d\nCantidad de Nucleos: %d\nTipo de Procesador: %s\n",indiceControl,pcs[indiceControl].velocidad,pcs[indiceControl].anios,pcs[indiceControl].cantidad_nucleos,pcs[indiceControl].tipo_cpu);
 }
 
 void mostrarMasVeloz(struct compu pcs[], int cantidad)
@@ -98,12 +98,12 @@ void mostrarMasVeloz(struct compu pcs[], int cantidad)
         {
             if (control == pcs[i].velocidad)
             {
-                printf("El modelo con mayor velocidad de procesamiento es:\n## MODELO %d ##\nVelocidad: %d Ghz\nAnio de fabricación: %d\nCantidad de Nucleos: %d\nTipo de Procesador: %s\n",i,pcs[0].velocidad,pcs[0].anios,pcs[0].cantidad_nucleos,pcs[0].tipo_cpu);
+                printf("El modelo con mayor velocidad de procesamiento es:\n## MODELO %d ##\nVelocidad: %d Ghz\nAnio de fabricacion: %d\nCantidad de Nucleos: %d\nTipo de Procesador: %s\n",i,pcs[0].velocidad,pcs[0].anios,pcs[0].cantidad_nucleos,pcs[0].tipo_cpu);
                 break;
             }
             
         }
 
 }
-    printf("El modelo con mayor velocidad de procesamiento es:\n## MODELO %d ##\nVelocidad: %d Ghz\nAnio de fabricación: %d\nCantidad de Nucleos: %d\nTipo de Procesador: %s\n",indiceControl,pcs[indiceControl].velocidad,pcs[indiceControl].anios,pcs[indiceControl].cantidad_nucleos,pcs[indiceControl].tipo_cpu); 
+    printf("El modelo con mayor velocidad de procesamiento es:\n## MODELO %d ##\nVelocidad: %d Ghz\nAnio de fabricacion: %d\nCantidad de Nucleos: %d\nTipo de Procesador: %s\n",indiceControl,pcs[indiceControl].velocidad,pcs[indiceControl].anios,pcs[indiceControl].cantidad_nucleos,pcs[indiceControl].tipo_cpu); 
 }
