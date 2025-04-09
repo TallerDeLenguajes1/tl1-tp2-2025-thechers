@@ -10,6 +10,7 @@ struct compu {
 };
 
 void listarPCs(struct compu pcs[], int cantidad);
+void mostrarMasVieja(struct compu pcs[],int cantidad);
 
 int main () {
     srand(time(NULL));
@@ -33,6 +34,9 @@ int main () {
     case 1:
             listarPCs(pcs,cantidad);
         break;
+    case 2: 
+            mostrarMasVieja(pcs,cantidad);
+        break;
     }
 
     return 0;
@@ -53,12 +57,30 @@ void listarPCs(struct compu pcs[], int cantidad)
 
 void mostrarMasVieja(struct compu pcs[],int cantidad)
 {
+    int control = pcs[0].anios,indiceControl;
+    for (int i = 1; i < cantidad; i++)
+    {
+        if (control > pcs[i].anios)
+        {
+            control = pcs[i].anios;
+            indiceControl = i;
+        }
+        else
+        {
+            if (control == pcs[i].anios)
+            {
+                printf("## MODELO %d ##\nVelocidad: %d Ghz\nAnio de fabricación: %d\nCantidad de Nucleos: %d\nTipo de Procesador: %s\n",i,pcs[0].velocidad,pcs[0].anios,pcs[0].cantidad_nucleos,pcs[0].tipo_cpu);
+                break;
+            }
+            
+        }
+        
+    }
     
-
+    printf("## MODELO %d ##\nVelocidad: %d Ghz\nAnio de fabricación: %d\nCantidad de Nucleos: %d\nTipo de Procesador: %s\n",indiceControl,pcs[indiceControl].velocidad,pcs[indiceControl].anios,pcs[indiceControl].cantidad_nucleos,pcs[indiceControl].tipo_cpu);
 }
 
-void mostrarMasveloz(struct compu pcs[], int cantidad)
+void mostrarMasVeloz(struct compu pcs[], int cantidad)
 {
-
-
+    
 }
