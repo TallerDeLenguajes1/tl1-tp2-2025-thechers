@@ -11,6 +11,7 @@ struct compu {
 
 void listarPCs(struct compu pcs[], int cantidad);
 void mostrarMasVieja(struct compu pcs[],int cantidad);
+void mostrarMasVeloz(struct compu pcs[], int cantidad);
 
 int main () {
     srand(time(NULL));
@@ -36,6 +37,9 @@ int main () {
         break;
     case 2: 
             mostrarMasVieja(pcs,cantidad);
+        break;
+    case 3:
+            mostrarMasVeloz(pcs,cantidad);
         break;
     }
 
@@ -82,5 +86,24 @@ void mostrarMasVieja(struct compu pcs[],int cantidad)
 
 void mostrarMasVeloz(struct compu pcs[], int cantidad)
 {
-    
+    int control = pcs[0].velocidad,indiceControl;
+    for (int i = 1; i < cantidad; i++)
+    {
+        if (control < pcs[i].velocidad)
+        {
+            control = pcs[i].velocidad;
+            indiceControl = i;
+        }
+        else
+        {
+            if (control == pcs[i].velocidad)
+            {
+                printf("El modelo con mayor velocidad de procesamiento es:\n## MODELO %d ##\nVelocidad: %d Ghz\nAnio de fabricación: %d\nCantidad de Nucleos: %d\nTipo de Procesador: %s\n",i,pcs[0].velocidad,pcs[0].anios,pcs[0].cantidad_nucleos,pcs[0].tipo_cpu);
+                break;
+            }
+            
+        }
+
+}
+    printf("El modelo con mayor velocidad de procesamiento es:\n## MODELO %d ##\nVelocidad: %d Ghz\nAnio de fabricación: %d\nCantidad de Nucleos: %d\nTipo de Procesador: %s\n",indiceControl,pcs[indiceControl].velocidad,pcs[indiceControl].anios,pcs[indiceControl].cantidad_nucleos,pcs[indiceControl].tipo_cpu); 
 }
